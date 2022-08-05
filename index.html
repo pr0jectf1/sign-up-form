@@ -5,25 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Intro component with sign up form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     body {
-      background-color: black;
+      padding: 0;
+      margin: 0;
+      background-color: hsl(0, 100%, 74%) ;
+      background-image: url('./images/bg-intro-mobile.png');
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
     }
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
   }
   .form-control {
-    width: 80%;
+    width: 88%;
+    /* height: 100%; */
     background-color: white;
+    margin-left: 5%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.5);
+    padding-top: 2%;
   }
-  .button {
-    width: 80%;
+  .free-trial {
+    width: 88%;
     background-color: #6A41B0;
+    margin-left: 5%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.5);
+  }
+  .free-trial-text {
+    color: white;
+    width: 50%;
+    text-align: center;
+    padding: 6% 0;
+    margin-left: 23%;
+  }
+  .description {
+    color: white;
+    width: 80%;
+    margin-left: 9%;
+    text-align: center;
+  }
+  .header {
+    color: white;
+    margin-left: 15%;
+    margin-top: 23%;
+  }
+  .input-field {
+    width: 82%;
+    padding: 4% 0 4%  4%;
+    margin: 4% 0 0 7%;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.08);
+    font-weight: bold;
+    
+  }
+  .free-trial-button {
+    width: 88%;
+    margin: 4% 0 0 7%;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+  }
+  .footer {
+    font-size: 10px;
+    width: 62%;
+    text-align: center;
+    margin: 3% 20%;
+    color: rgba(0, 0, 0, 0.4);
+
+  }
+  .footer-link {
+    font-weight: bold;
+    color: red;
   }
 
 @media only screen and (min-width: 768px) {
@@ -48,20 +111,22 @@
 </head>
 <body>
 
-  <h1>Learn to code by watching others</h1>
-  <p>See how experience developers solve problems in real-time. Watching scripted tutorials is great, but udnerstanding how developers think is invaluable</p>
-  
-  <div class="button">
-    <p><b>Try it free 7 days</b> then $20/mo. thereafter</p>
+  <h1 class="header">Learn to code by watching others</h1>
+  <p class="description">See how experience developers solve problems in real-time. Watching scripted tutorials is great, but udnerstanding how developers think is invaluable</p>
+  <div class="free-trial">
+    <p class="free-trial-text"><b>Try it free 7 days</b> then $20/mo. thereafter</p>
   </div>
+  
 
   <form action="" class="form-control">
-    <input type="text" placeholder="First Name">
-    <input type="text" placeholder="Last Name">
-    <input type="text" placeholder="Email Address">
-    <input type="text" placeholder="Password">
+    <input class="input-field" type="text" placeholder="First Name">
+    <input class="input-field" type="text" placeholder="Last Name">
+    <input class="input-field" type="text" placeholder="Email Address">
+    <input class="input-field" type="text" placeholder="Password">
 
-    <button>Claim Your Free Trial</button>
+    <button class="free-trial-button"><h3>CLAIM YOUR FREE TRIAL</h3></button>
+
+    <p class="footer">By clicking the button, you are agreeing to our <a class="footer-link">Terms and Services</a></p>
   </form>
 
   <footer>
